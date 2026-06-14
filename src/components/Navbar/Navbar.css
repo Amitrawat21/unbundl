@@ -1,0 +1,108 @@
+.navbar {
+  position: fixed;   /* ✅ always visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  padding: 16px 100px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Prevent content hidden behind navbar */
+body {
+  padding-top: 80px;
+}
+
+/* Logo */
+.logo {
+  text-align: left;
+}
+
+.logo h2 {
+  color: #8F62D4;
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 0.8;
+}
+
+.trademark {
+  font-size: 10px;
+  vertical-align: super;
+  font-weight: bolder;
+}
+
+.logo span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #8F62D4;
+  margin-left: 65px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Call Icon */
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  background: #8F62D4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.nav-icon:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Mobile Responsive */
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    height: 72px;
+    padding: 0 16px;   /* remove vertical padding */
+  }
+
+  /* ✅ Make logo take full navbar height */
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* center vertically */
+    height: 100%;
+  }
+
+  /* ✅ Remove extra spacing */
+  .logo h2 {
+    font-size: 22px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .logo span {
+    margin-left: 0;   /* ❌ remove large offset */
+    font-size: 8px;
+    line-height: 1;
+  }
+
+  /* ✅ Icon perfectly centered */
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

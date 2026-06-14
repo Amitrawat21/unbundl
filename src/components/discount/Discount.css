@@ -1,0 +1,179 @@
+
+
+.container {
+  display: flex;
+  padding:30px;
+  justify-content: center;
+  align-items: center;
+gap:20px;
+  background: #F0F9FF;
+}
+
+.left-content {
+
+  max-width: 470px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+
+}
+
+.headingg {
+  font-size: 40px;
+  font-weight: 800;
+  font-style:extrabold;
+  font-family:'Instrument Sans', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  line-height: 120%;
+}
+
+.description {
+  font-size: 16px;
+  color: #4a4a5a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.right-card {
+  flex: 1;
+  max-width: 480px;
+  background: white;
+  border-radius: 16px;
+  padding: 18px 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 800;
+  font-style:extrabold;
+  font-family:'Instrument Sans', sans-serif;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.original-price {
+  font-size: 16px;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.starting-text {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+.tax-text {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 15px;
+  color: #374151;
+}
+
+.learn-more {
+  width:130px;
+  position: relative;
+  left: 360px;
+  bottom:40px;
+  cursor: pointer;
+
+}
+
+.learn-more-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8b5cf6;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  color: #8b5cf6;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .left-content,
+  .right-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-image {
+    margin-top: 20px;
+  }
+
+  .learn-more {
+    justify-content: center;
+  }
+}

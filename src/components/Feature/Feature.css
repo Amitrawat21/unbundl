@@ -1,0 +1,120 @@
+/* Wrapper */
+.feature-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.comparison-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header */
+.table-header {
+  display: flex;
+  background: #ffffff;
+}
+
+/* Rows */
+.table-row {
+  display: flex;
+}
+
+/* Columns */
+.col-features {
+  flex: 2;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.col-whistle,
+.col-other {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Continuous blue column */
+.col-whistle {
+  background: #EFF8FE;
+}
+
+/* ✅ Top rounded */
+.table-header .col-whistle {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ✅ Bottom rounded */
+.table-row:last-child .col-whistle {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Feature row */
+.feature-cell {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.feature-name {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Header text */
+.features-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c3c3c;
+}
+
+.other-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #545454;
+}
+
+/* Brand */
+.whistle-brand {
+  text-align: center;
+}
+
+.whistle-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #9770d7;
+}
+
+.whistle-sub {
+  font-size: 10px;
+  color: #b49ce4;
+}
+
+/* Icons */
+.cell-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.chevron-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Text */
+.cell-text {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  line-height: 1.4;
+}
