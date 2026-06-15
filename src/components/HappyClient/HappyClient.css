@@ -10,11 +10,13 @@
 
 .title {
   font-size: 2rem;
-  font-weight: 700;
-  color: #555555;
+  font-weight: 800;
+  color: #000000;
   margin-bottom: 40px;
   letter-spacing: -0.4px;
+  font-style: ExtraBold;
 }
+
 
 .wrapper {
   background: #ffffff;
@@ -25,9 +27,13 @@
   overflow-x: auto;
   max-width: 1280px;
   width: 100%;
-  background: rgb(255, 223, 223);
-
 }
+
+
+.wrapper-mobile {
+  display: none;
+}
+
 
 .card {
   height: 405px;
@@ -38,38 +44,43 @@
   display: flex;
   flex-direction: column;
   min-height: 340px;
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+   margin: 20px 0px;
 }
 
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
 .cardHeader {
   padding: 12px 12px 0;
   display: flex;
   justify-content: flex-end;
 }
 
-.logo {
+.logoo {
   text-align: right;
   line-height: 1;
+    color: #ffffff;
 }
 
-.logoMain {
+.logoMainn {
   display: block;
-  font-size: 14px;
+  font-size: 18px;  
   font-weight: 800;
-  color: #ffffff;
-  font-style: italic;
+  color: #ffffff;    
   letter-spacing: -0.3px;
 }
 
-.logoSub {
+.logoSubb {
   display: block;
-  font-size: 7px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  margin-top: 1px;
-}
+  font-size: 7px;    
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85); 
+  letter-spacing: 2px;
 
+  margin-top: 2px;
+}
 .imageBox {
   flex: 1;
   position: relative;
@@ -97,17 +108,19 @@
   font-weight: 900;
   color: #9C27D3;
   line-height: 1;
+  z-index: 1;
 }
 
 .quoteBottom {
   position: absolute;
-  bottom: 8px;
+  bottom: 1px;
   right: 10px;
-  font-size: 36px;
+  font-size: 100px; 
   font-family: Georgia, serif;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(255, 255, 255);
   line-height: 1;
+  z-index: 1;
 }
 
 .cardFooter {
@@ -115,7 +128,7 @@
 }
 
 .cardLabel {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
@@ -130,4 +143,50 @@
   text-transform: none;
   opacity: 0.7;
   letter-spacing: 0;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+
+  .wrapper {
+    display: none;
+  }
+
+ 
+  .wrapper-mobile {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 16px 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .wrapper-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  
+  .wrapper-mobile .card {
+    min-width: 260px;
+    max-width: 260px;
+    height: 300px;
+    min-height: unset;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
 }

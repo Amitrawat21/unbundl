@@ -4,15 +4,13 @@ export default function CTASection() {
   return (
     <div className="cta-container">
       <div className="cta-grid">
-        {/* Left Content */}
         <div className="cta-content">
           <h2>
-            Book a Free 3D Teeth Scan and Orthodontist Consult in a Clove Dental
-            Clinic near you
+            Book a Free Orthodontist Consult in a Clove Dental Clinic. 450+ near
+            you
           </h2>
         </div>
 
-        {/* Right Logo */}
         <div className="cta-logo-section">
           <div className="clinic-logo">
             <div className="clinic-logo-content">
@@ -22,7 +20,21 @@ export default function CTASection() {
               <div className="clinic-logo-subtext">DENTAL</div>
             </div>
           </div>
-          <button className="cta-button">Find Clinic</button>
+          <button className="cta-button">
+            Find Clinic
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

@@ -3,22 +3,19 @@
 }
 
 .form-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Question */
 .form-question h2 {
   text-align: center;
-  font-style:Instrument Sans;
   margin-bottom: 20px;
+  font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
-  font-style: semibold;
   font-size: 24px;
-  letter-spacing: 0%;
 }
 
-/* Radio */
+
 .radio-group {
   display: flex;
   justify-content: center;
@@ -28,55 +25,72 @@
 
 .radio-option {
   display: flex;
-  font-family: 'Instrument Sans', sans-serif;
   align-items: center;
   gap: 8px;
-    font-weight: 600;
-    font-size: 16px;
-  font-style: semibold;
-
-
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-/* ROW: NAME + MOBILE + BUTTON */
+
 .form-row {
   display: flex;
   gap: 12px;
   margin-bottom: 12px;
 }
 
-/* Inputs take equal space */
+
 .form-input {
-  font-style:Instrument Sans;
-   font-size: 14px;
-   color: #080606;
-  padding: 0 10px;
-  border: 1px solid #c9c9c9;
+  padding: 0 12px;
+  border: 1px solid #dbdbdb;
   border-radius: 6px;
+  height: 52px;
+  width: 320px;
   font-size: 14px;
-  height:52px;
-  width:320px;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #060806;
 }
 
-/* Button */
+.form-input::placeholder {
+  color: #b4b4b4;
+  opacity: 1;
+}
+
+
+.form-input:focus {
+  outline: none;
+  border-color: #8F62D4;
+  box-shadow: 0 0 0 2px rgba(143, 98, 212, 0.2);
+}
+
+
 .submit-button {
-  padding: 0 5px;
-  background: #c0a0f1;
-  color: white;
+  height: 52px;
+  width: 320px;
+  border: none;
   border-radius: 6px;
   font-weight: 600;
+  font-family: 'Instrument Sans', sans-serif;
   white-space: nowrap;
-  border: none;
-  height:52px;
-  width:320px;
+  transition: 0.3s;
+
+  background: #c3a6ef;
+  color: white;
+  cursor: not-allowed;
 }
 
-/* .submit-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-} */
 
-/* Consent row */
+.submit-button:not(:disabled) {
+  background: #8F62D4;
+  cursor: pointer;
+}
+
+
+.submit-button:not(:disabled):hover {
+  background: #7a4fc4;
+}
+
+
 .consent-group {
   display: flex;
   gap: 8px;
@@ -87,20 +101,27 @@
 .consent-text {
   color: #b2b2b2;
   font-family: 'Instrument Sans', sans-serif;
-  font-style:regular;
-  font-weight:400;
+  font-weight: 400;
   font-size: 12px;
-  line-height:18px;
+  line-height: 18px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
+
   }
 
+  .form-question h2 {
+    font-size: 16px;
+  }
+
+  .form-input{
+    width: 92%;
+
+  }
   .submit-button {
     width: 100%;
-    padding: 12px;
   }
 }

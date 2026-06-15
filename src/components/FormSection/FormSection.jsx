@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Toaster, toast } from "react-hot-toast";
 import "./FormSection.css";
 
 export default function FormSection() {
@@ -8,18 +9,30 @@ export default function FormSection() {
   const [consent, setConsent] = useState(false);
 
   const handleBookScan = () => {
+    toast.success("Scan Booked Successfully ✅");
+
     console.log({
       selectedGap,
       fullName,
       mobileNumber,
       consent,
     });
+
+   
+    setSelectedGap(null);
+    setFullName("");
+    setMobileNumber("");
+    setConsent(false);
   };
+
+  const isFormValid =  fullName && mobileNumber && consent;
 
   return (
     <section className="form-section">
+      <Toaster position="top-center" />
+
       <div className="form-container">
-        {/* Question */}
+       
         <div className="form-question">
           <h2>Do you have Teeth Gaps or Crooked Teeth?</h2>
 
@@ -48,11 +61,11 @@ export default function FormSection() {
           </div>
         </div>
 
-        {/* Row: Name + Mobile + Button */}
+        {/* Row */}
         <div className="form-row">
           <input
             type="text"
-            placeholder="Full Name*"
+            placeholder="Ajay Kumar*"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             className="form-input"
@@ -68,14 +81,14 @@ export default function FormSection() {
 
           <button
             onClick={handleBookScan}
-            disabled={!selectedGap || !fullName || !mobileNumber || !consent}
+            disabled={!isFormValid}
             className="submit-button"
           >
             Book a Free Scan
           </button>
         </div>
 
-        {/* Consent */}
+       
         <label className="consent-group">
           <input
             type="checkbox"
@@ -83,7 +96,8 @@ export default function FormSection() {
             onChange={(e) => setConsent(e.target.checked)}
           />
           <span className="consent-text">
-            I hereby consent to receive calls/messages from Whizoe  and its partner override dnd setting.
+            I hereby consent to receive calls/messages from Whizoe and its
+            partner override DND setting.
           </span>
         </label>
       </div>

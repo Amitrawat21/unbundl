@@ -1,19 +1,21 @@
+
 import { useState } from "react";
 import "./Faq.css";
+import faqs from "../../assets/Data/ResultData";
 
-const faqs = [
-  "What are Aligners?",
-  "How do Aligners work?",
-  "Can any dentist do irregular teeth treatment?",
-  "Are there any restriction on eating or drinking?",
-  "How long does the treatment take?",
-];
+
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    if (openIndexes.includes(index)) {
+      
+      setOpenIndexes(openIndexes.filter((i) => i !== index));
+    } else {
+   
+      setOpenIndexes([...openIndexes, index]);
+    }
   };
 
   return (
@@ -23,17 +25,17 @@ export default function FAQ() {
       </h2>
 
       <div className="faq-container">
-        {faqs.map((q, i) => (
-          <div key={i} className="faq-item" onClick={() => toggle(i)}>
-            <div className="faq-question">
-              {q}
-              <span className="faq-icon">{openIndex === i ? "-" : "+"}</span>
+        {faqs.map((faq, i) => (
+          <div key={i} className="faq-item">
+            <div className="faq-question" onClick={() => toggle(i)}>
+              {faq.question}
+              <span className="faq-icon">
+                {openIndexes.includes(i) ? "-" : "+"}
+              </span>
             </div>
 
-            {openIndex === i && (
-              <p className="faq-answer">
-                This is a sample answer. Replace with real content.
-              </p>
+            {openIndexes.includes(i) && (
+              <p className="faq-answer">{faq.answer}</p>
             )}
           </div>
         ))}

@@ -1,10 +1,12 @@
 import "./Footer.css";
+import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FiPhoneCall, FiMail } from "react-icons/fi";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Links */}
+   
         <div>
           <h3>Quick Links</h3>
           <ul>
@@ -17,24 +19,26 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
+  
         <div>
           <h3>Get in Touch Now!</h3>
-          <p>📞 011-6932-8350</p>
-          <p>✉️ support@whistle.in</p>
+          <p className="contact-item">
+            <FiPhoneCall className="icon" /> 011-6932-8350
+          </p>
+          <p className="contact-item">
+            <FiMail className="icon" /> support@whistle.in
+          </p>
         </div>
 
-        {/* Social */}
         <div>
           <h3>Follow us on</h3>
           <div className="social-icons">
-            <span>📷</span>
-            <span>f</span>
-            <span>X</span>
+            <FaInstagram />
+            <FaFacebookF />
+            <FaTwitter />
           </div>
         </div>
 
-        {/* Policy */}
         <div>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>

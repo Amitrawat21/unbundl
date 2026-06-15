@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 .whistle-section {
-  background-color: #e8f0f7;
+  background-color: #F0F9FF;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -9,6 +9,7 @@
   padding: 48px 24px;
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
+  
 
 }
 
@@ -20,7 +21,7 @@
   max-width: 1000px;
   width: 100%;
   gap: 24px; /* ✅ add this */
-    background-color: #e8f0f7;
+    background-color: #F0F9FF;
 }
 
 .whistle-content {
@@ -31,6 +32,7 @@
   justify-content: center;
   gap: 32px;
   background: #ffffff;
+  border-radius: 20px;
 }
 
 .whistle-title {
@@ -89,10 +91,13 @@
 
 .feature-desc {
   font-size: 14px;
-  color: #5a6a7a;
+  color: #474747;
   line-height: 1.55;
   margin: 0;
   max-width: 340px;
+  font-weight: 400;
+  font-style: regular;
+  font-family: 'Instrument Sans', sans-serif;
 }
 
 .whistle-image {
@@ -119,14 +124,16 @@
   .whistle-image {
     width: 100%;
     height: 260px;
-    order: -1;
+    order: 1;        
   }
 
   .whistle-content {
+    order: 0;        
     padding: 36px 28px;
   }
 
   .whistle-title {
-    font-size: 28px;
+    font-size: 22px;
+    text-align: center;
   }
 }

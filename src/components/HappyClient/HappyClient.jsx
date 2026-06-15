@@ -5,17 +5,14 @@ function TestimonialCard({ imgSrc, imgAlt }) {
   return (
     <div className="card">
       <div className="cardHeader">
-        <div className="logo">
-          <span className="logoMain">whistle</span>
-          <span className="logoSub">AND SMILE</span>
+        <div className="logoo">
+          <span className="logoMainn">Whistle</span>
+          <span className="logoSubb">AND SMILE</span>
         </div>
       </div>
 
       <div className="imageBox">
-        <span className="quoteTop">&ldquo;</span>
-
         <img src={imgSrc} alt={imgAlt} />
-
         <span className="quoteBottom">&rdquo;</span>
       </div>
 
@@ -35,9 +32,7 @@ export default function HappySmilers() {
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((data) => {
-        setProducts(data.slice(0, 5)); // ✅ only first 5
-      })
+      .then((data) => setProducts(data.slice(0, 5)))
       .catch((err) => console.log(err));
   }, []);
 
@@ -49,7 +44,16 @@ export default function HappySmilers() {
         {products.map((item) => (
           <TestimonialCard
             key={item.id}
-            imgSrc={item.image} // ✅ API image
+            imgSrc={item.image}
+            imgAlt={item.title}
+          />
+        ))}
+      </div>
+      <div className="wrapper-mobile">
+        {products.map((item) => (
+          <TestimonialCard
+            key={item.id}
+            imgSrc={item.image}
             imgAlt={item.title}
           />
         ))}

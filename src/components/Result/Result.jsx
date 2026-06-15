@@ -34,8 +34,20 @@ export default function Result() {
     <div className="containerR">
       <div className="wrapperr">
         <h2 className="headingr">Results You'll Love</h2>
-
         <div className="grid">
+          {resultsData.map((item) => (
+            <ResultCard
+              key={item.id}
+              beforeImage={item.beforeImage}
+              afterImage={item.afterImage}
+              concern={item.concern}
+              duration={item.duration}
+            />
+          ))}
+        </div>
+
+        {/* Mobile horizontal scroll */}
+        <div className="mobile-scroll">
           {resultsData.map((item) => (
             <ResultCard
               key={item.id}

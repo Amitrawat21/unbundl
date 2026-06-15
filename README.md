@@ -1,20 +1,75 @@
-<<<<<<< HEAD
-# unbundl
-=======
-# React + Vite
+# Project Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Setup Instructions
 
-Currently, two official plugins are available:
+Follow these steps to run the project locally:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Clone the repository
 
-## React Compiler
+```bash
+git clone <your-repo-link>
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Install dependencies
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> a6723ae (initial commit)
+### 3. Run the project
+
+If using Vite:
+
+```bash
+npm run dev
+```
+
+
+## 📝 Form Submission Flow
+
+- Enter your **name** and **mobile number** in the form.
+- Accept the **consent checkbox**.
+- After that, the **“Book Free Scan” button will be enabled**.
+- Click the button to submit the form.
+
+---
+
+## 📦 Data Handling
+
+- The data is stored in the `Data` folder inside `assets`.
+- The data is rendered using `useState` and `useEffect` in React.
+- API-style data flow is used to display products dynamically.
+
+---
+
+## 🎥 Video Section
+
+- A video is included inside the **Steps component**.
+- Users can play the video directly from the UI.
+
+---
+
+## ⭐ Features & FAQ
+
+- In the **Features component**, clicking the dropdown arrow expands the content.
+- The same expand/collapse behavior is implemented in the **FAQ section**.
+
+---
+
+## 📱 Mobile Responsiveness
+
+- The website is fully responsive for **mobile view only**.
+- The design is optimized for **375 × 667 screen size**.
+- Tablet view is not specifically optimized.
+
+---
+
+## 📸 Scrolling Behavior
+
+- In mobile view, users can scroll through images smoothly.
+
+---
+
+## 🤝 Support
+
+If you have any questions or need clarification, I’m available to explain the project over a Google Meet session if required.

@@ -1,26 +1,24 @@
+
 .navbar {
-  position: fixed;   /* ✅ always visible */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   height: 80px;
   padding: 16px 100px;
   background: #ffffff;
   box-sizing: border-box;
 }
 
-/* Prevent content hidden behind navbar */
 body {
   padding-top: 80px;
 }
 
-/* Logo */
+
 .logo {
   text-align: left;
 }
@@ -43,47 +41,127 @@ body {
   font-size: 9px;
   letter-spacing: 1px;
   color: #8F62D4;
-  margin-left: 65px;
   font-weight: bold;
+  margin-left: 65px;
   display: block;
 }
 
-/* Call Icon */
-.nav-icon {
-  width: 40px;
-  height: 40px;
+
+.nav-phone-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
   background: #8F62D4;
-  border-radius: 50%;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  overflow: visible;
+  height: 48px;
+  position: relative;
+}
+
+
+.phone-number {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0;
+  letter-spacing: 0.3px;
+  color: white;
+}
+
+.phone-number.visible {
+  max-width: 160px;
+  opacity: 1;
+  padding: 0 14px 0 4px;
+}
+
+
+.icon-wrap {
+  width: 47px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   color: white;
-  font-size: 16px;
-  text-decoration: none;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
 }
 
-/* Hover effect */
-.nav-icon:hover {
-  opacity: 0.9;
+
+.phone-svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
 }
 
-/* ✅ Mobile Responsive */
-/* Mobile */
+.phone-svg.ringing {
+  animation: ring 0.45s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes ring {
+  0%   { transform: rotate(-22deg) scale(1.1); }
+  100% { transform: rotate(22deg) scale(1.15); }
+}
+
+.wave-wrap {
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wave-wrap.active {
+  opacity: 1;
+}
+
+.wave-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arc1, .arc2, .arc3 {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  opacity: 0;
+}
+
+.arc1 { stroke-width: 1.8; animation: wave 1.4s ease-out infinite; animation-delay: 0s; }
+.arc2 { stroke-width: 1.5; animation: wave 1.4s ease-out infinite; animation-delay: 0.25s; }
+.arc3 { stroke-width: 1.2; animation: wave 1.4s ease-out infinite; animation-delay: 0.5s; }
+
+@keyframes wave {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: 72px;
-    padding: 0 16px;   /* remove vertical padding */
+    padding: 0 16px;
   }
 
-  /* ✅ Make logo take full navbar height */
   .logo {
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* center vertically */
+    justify-content: center;
     height: 100%;
   }
 
-  /* ✅ Remove extra spacing */
   .logo h2 {
     font-size: 22px;
     margin: 0;
@@ -91,18 +169,41 @@ body {
   }
 
   .logo span {
-    margin-left: 0;   /* ❌ remove large offset */
+    margin-left: 35px;
     font-size: 8px;
     line-height: 1;
+    font-size: 800;
+    font-style: bold;
+
+    
   }
 
-  /* ✅ Icon perfectly centered */
-  .nav-icon {
+  .nav-phone-btn {
+    height: 36px;
+  }
+
+  .phone-number {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+  }
+
+  .phone-number.visible {
+    max-width: 120px;
+    padding: 0 10px 0 4px;
+  }
+
+  .icon-wrap {
     width: 36px;
     height: 36px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .phone-svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .wave-wrap {
+    width: 32px;
+    height: 32px;
   }
 }

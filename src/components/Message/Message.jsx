@@ -3,7 +3,7 @@ import Rectangle from "../../assets/Rectangle.png"
 export default function DoctorLed({  onCallbackClick }) {
   return (
     <section className="doctor-section">
-      {/* Left: content */}
+  
       <div className="doctor-content">
         <h2 className="doctor-headline">
           We are Doctor-led, not
@@ -22,7 +22,7 @@ export default function DoctorLed({  onCallbackClick }) {
         </button>
       </div>
 
-      {/* Right: image */}
+
       <div className="doctor-image">
         <img src={Rectangle} alt="Orthodontist at a dental clinic" />
       </div>

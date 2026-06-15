@@ -1,61 +1,58 @@
+.cta-container {
+  padding:  20px;
+   transition: transform 0.3s ease;
+   
 
+}
 
-
+.cta-container:hover {
+  transform: scale(1.05);
+}
 
 .cta-grid {
   display: flex;
-  margin: 20px 120px;
-  padding: 20px 80px;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 50px 80px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background: #F0F9FF;
   border-radius: 15px;
-  gap:200px
+  gap: 40px;
 }
 
 
-/* TEXT */
+.cta-content {
+  flex: 1;
+}
+
 .cta-content h2 {
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
-  font-style: semibold;
   font-size: 28px;
+  font-style: semiBold;
   color: #262626;
+  width :810px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 
-
-/* BUTTON */
-.cta-button {
-  padding: 10px 20px;
-  color: rgb(141, 23, 174);
-  border-radius: 6px;
-  background: #F0F9FF;
-   font-style: semibold;
-  font-weight: 600;
-  font-size:14px;
-  font-family: 'Instrument Sans', sans-serif;
-  border: none;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background: #6d28d9;
-}
-
-/* LOGO BOX */
-.cta-logo-section{
+.cta-logo-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
- 
+  gap: 12px;
+  flex-shrink: 0;
 }
+
+
 .clinic-logo {
   background: #522409;
   color: white;
-  padding: 1px 18px;
+  padding: 8px 18px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,35 +60,80 @@
 
 .clinic-logo-content {
   text-align: center;
-
 }
 
 .clinic-logo-text {
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 700;
-  color:orange;
+  color: orange;
+  line-height: 1.1;
 }
-.clinic-logo-text span{
-  color :#FFEFE2;
-    font-weight: 700;
-    font-style:bold
+
+.clinic-logo-text span {
+  color: #FFEFE2;
+  font-weight: 700;
 }
 
 .clinic-logo-subtext {
-  font-size: 12px;
-  letter-spacing: 1px;
-    color :#FFEFE2;
-    font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #FFEFE2;
+  font-weight: 600;
 }
 
-/* RESPONSIVE */
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  color: #7c3aed;
+  background: none;
+  border: none;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  color: #6d28d9;
+}
+
 @media (max-width: 768px) {
+  .cta-container {
+    padding: 0 0px;
+  }
+
   .cta-grid {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+    margin: 12px auto;
+  }
+
+  .cta-content h2 {
+    width:328px;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: Bold;
+  color: #262626;
+    font-family: 'Instrument Sans', sans-serif;
+  }
+
+  .cta-logo-section {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
   }
 
   .clinic-logo {
-    width: 100%;
+    padding: 6px 14px;
+  }
+
+  .clinic-logo-text {
+    font-size: 22px;
   }
 }

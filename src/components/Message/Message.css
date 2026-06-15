@@ -2,13 +2,14 @@
 
 .doctor-section {
   font-family: 'Inter', sans-serif;
-  background: #E8EFF8;
-  min-height: 520px;
+height: 600px;
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
+  background-color: #F0F9FF;
 }
 
-/* Left Content */
+
 .doctor-content {
   display: flex;
   flex-direction: column;
@@ -46,27 +47,29 @@
   border: none;
   cursor: pointer;
   transition: 0.2s ease;
+   transition: transform 0.3s ease;
 }
 
 .doctor-btn:hover {
   background: #7b1fa2;
   transform: translateY(-1px);
+   transform: scale(1.05);
 }
 
-/* Right Image */
 .doctor-image {
-  position: relative;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  background: #c2d2e8;
 }
 
 .doctor-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Placeholder */
+
 .doctor-placeholder {
   width: 100%;
   height: 100%;
@@ -89,21 +92,40 @@
   border-radius: 50% 50% 0 0 / 40% 40% 0 0;
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .doctor-section {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: unset;
   }
 
+
+  .doctor-image {
+    order: -1;
+    min-height: 300px;
+    width: 100%;
+  }
+
+  .doctor-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+ 
   .doctor-content {
-    padding: 48px 24px;
+    order: 1;
+    padding: 40px 24px;
+    gap: 20px;
   }
 
   .doctor-headline {
     font-size: 28px;
   }
 
-  .doctor-image {
-    min-height: 300px;
+  .doctor-btn {
+    width: 100%;
   }
 }

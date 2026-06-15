@@ -1,4 +1,7 @@
+import { useState } from "react";
 import "./Feature.css";
+
+import rows from "../../assets/Data/ResultData";
 
 const CHECK_GREEN_URL =
   "https://static.codia.ai/s/image_008cff6e-8990-46ee-aeee-5b2b3b79ee7c.png";
@@ -18,61 +21,12 @@ const CROSS_RED3_URL =
 const CROSS_RED4_URL =
   "https://static.codia.ai/s/image_6cfafa35-4cae-4c0c-89de-b534b7d07989.png";
 
-const CHEVRON_URL =
-  "https://static.codia.ai/s/image_4622ebda-420e-4cb1-9a2f-9160292c34a0.png";
-const CHEVRON2_URL =
-  "https://static.codia.ai/s/image_35355df8-b33b-4a69-b71e-10d2c8fa04e6.png";
-const CHEVRON3_URL =
-  "https://static.codia.ai/s/image_e3a1d176-a2f8-4471-b99c-8c00cd807b11.png";
-const CHEVRON4_URL =
-  "https://static.codia.ai/s/image_dbcc1159-d025-499f-b680-4250b8a6199d.png";
-const CHEVRON5_URL =
-  "https://static.codia.ai/s/image_075ae91c-c34e-46b9-a10d-96b9218f4bbf.png";
 
-const rows = [
-  {
-    feature: "Easy to complex cases",
-    chevron: CHEVRON_URL,
-    whistle: { type: "text", value: "Yes, mild to\ncomplex" },
-    other: { type: "text", value: "No, only mild to\nmoderate" },
-  },
-  {
-    feature: "Clear-cut Pricing",
-    chevron: CHEVRON2_URL,
-    whistle: { type: "icon", url: CHECK_GREEN3_URL },
-    other: { type: "icon", url: CROSS_RED1_URL },
-  },
-  {
-    feature: "Aligner Change",
-    chevron: CHEVRON3_URL,
-    whistle: { type: "text", value: "Every 10 days" },
-    other: { type: "text", value: "Every 2 weeks" },
-  },
-  {
-    feature: "Clinical Partnership",
-    chevron: CHEVRON4_URL,
-    whistle: { type: "icon", url: CHECK_GREEN2_URL },
-    other: { type: "icon", url: CROSS_RED2_URL },
-  },
-  {
-    feature: "Movement Between Cities",
-    chevron: CHEVRON5_URL,
-    whistle: { type: "icon", url: CHECK_GREEN_URL },
-    other: { type: "icon", url: CROSS_RED3_URL },
-  },
-  {
-    feature: "Complimentary Teeth Scaling",
-    chevron: CHEVRON2_URL,
-    whistle: { type: "icon", url: CHECK_GREEN4_URL },
-    other: { type: "icon", url: CROSS_RED4_URL },
-  },
-];
 
 function CellContent({ cell }) {
   if (cell.type === "icon") {
     return <img src={cell.url} alt="" className="cell-icon" />;
   }
-
   return (
     <span className="cell-text">
       {cell.value.split("\n").map((line, i) => (
@@ -86,44 +40,65 @@ function CellContent({ cell }) {
 }
 
 export default function Feature() {
+  const [openRow, setOpenRow] = useState(null);
+
   return (
-    <div className="feature-wrapper">
-      <div className="comparison-table">
-        {/* Header */}
-        <div className="table-header">
-          <div className="col-features">
-            <span className="features-label">Features</span>
-          </div>
-
-          <div className="col-whistle">
-            <div className="whistle-brand">
-              <span className="whistle-name">whistle</span>
-              <span className="whistle-sub">AND SMILE</span>
+    <div className="feature">
+      <h1>What sets Whistle apart?</h1>
+      <div className="feature-wrapper">
+        <div className="comparison-table">
+  
+          <div className="table-header">
+            <div className="col-features">
+              <span className="features-labell">Features</span>
+            </div>
+            <div className="col-whistle">
+              <div className="whistle-brand">
+                <span className="whistle-name">whistle</span>
+                <span className="whistle-sub">AND SMILE</span>
+              </div>
+            </div>
+            <div className="col-other">
+              <span className="other-label">Other Brands</span>
             </div>
           </div>
 
-          <div className="col-other">
-            <span className="other-label">Other Brands</span>
-          </div>
+    
+          {rows.map((row, idx) => (
+            <div key={idx}>
+              <div
+                className="table-row"
+                onClick={() =>
+                  row.expand && setOpenRow(openRow === idx ? null : idx)
+                }
+                style={{ cursor: row.expand ? "pointer" : "default" }}
+              >
+                <div className="col-features feature-cell">
+                  <span className="feature-name">{row.feature}</span>
+                
+                  {row.expand && (
+                    <span
+                      className={`arrow-icon ${openRow === idx ? "arrow-up" : "arrow-down"}`}
+                    >
+                      ‹
+                    </span>
+                  )}
+                </div>
+                <div className="col-whistle value-cell">
+                  <CellContent cell={row.whistle} />
+                </div>
+                <div className="col-other value-cell">
+                  <CellContent cell={row.other} />
+                </div>
+              </div>
+
+          
+              {openRow === idx && row.expand && (
+                <div className="expand-panel">{row.expand}</div>
+              )}
+            </div>
+          ))}
         </div>
-
-        {/* Rows */}
-        {rows.map((row, idx) => (
-          <div key={idx} className="table-row">
-            <div className="col-features feature-cell">
-              <span className="feature-name">{row.feature}</span>
-              <img src={row.chevron} alt="" className="chevron-icon" />
-            </div>
-
-            <div className="col-whistle value-cell">
-              <CellContent cell={row.whistle} />
-            </div>
-
-            <div className="col-other value-cell">
-              <CellContent cell={row.other} />
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
