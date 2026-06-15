@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Feature.css";
 
-import rows from "../../assets/Data/ResultData";
 
 const CHECK_GREEN_URL =
   "https://static.codia.ai/s/image_008cff6e-8990-46ee-aeee-5b2b3b79ee7c.png";
@@ -21,7 +20,50 @@ const CROSS_RED3_URL =
 const CROSS_RED4_URL =
   "https://static.codia.ai/s/image_6cfafa35-4cae-4c0c-89de-b534b7d07989.png";
 
-
+ export const rows = [
+   {
+     feature: "Easy to complex cases",
+     whistle: { type: "text", value: "Yes, mild to\ncomplex" },
+     other: { type: "text", value: "No, only mild to\nmoderate" },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+   {
+     feature: "Clear-cut Pricing",
+     whistle: { type: "icon", url: CHECK_GREEN3_URL },
+     other: { type: "icon", url: CROSS_RED1_URL },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+   {
+     feature: "Aligner Change",
+     whistle: { type: "text", value: "Every 10 days" },
+     other: { type: "text", value: "Every 2 weeks" },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+   {
+     feature: "Clinical Partnership",
+     whistle: { type: "icon", url: CHECK_GREEN2_URL },
+     other: { type: "icon", url: CROSS_RED2_URL },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+   {
+     feature: "Movement Between Cities",
+     whistle: { type: "icon", url: CHECK_GREEN_URL },
+     other: { type: "icon", url: CROSS_RED3_URL },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+   {
+     feature: "Complimentary Teeth Scaling",
+     whistle: { type: "icon", url: CHECK_GREEN4_URL },
+     other: { type: "icon", url: CROSS_RED4_URL },
+     expand:
+       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+   },
+ ];
 
 function CellContent({ cell }) {
   if (cell.type === "icon") {

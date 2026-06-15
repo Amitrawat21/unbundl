@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import "./Faq.css";
-import faqs from "../../assets/Data/ResultData";
+import { faqs } from "../../assets/Data/ResultData";
 
 
 

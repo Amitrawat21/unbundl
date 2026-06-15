@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Steps.css";
 import playvideo from "../../assets/playvideo.png";
-import STEPS from "../../assets/Data/ResultData";
+import {STEPS} from "../../assets/Data/ResultData.js";
 
 export default function FourSteps() {
   const [isPlaying, setIsPlaying] = useState(false);

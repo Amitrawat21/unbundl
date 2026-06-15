@@ -6,6 +6,13 @@ import ProtrudingBefore from "../ProtrudingBefore.png";
 import ProtrudingAfter from "../ProtrudingAfter.png";
 import OverBiteBefore from "../OverBiteBefore.png";
 import OverBiteAfter from "../OverBiteAfter.png";
+import price from "../price.svg";
+import Frame from "../Frame.svg";
+import Predictable from "../Predictable.svg";
+import Frame53 from "../Frame53.png";
+import Frame54 from "../Frame54.png";
+import choose3 from "../choose3.png";
+import choose4 from "../choose4.png";
 
 export const resultsData = [
   {
@@ -39,41 +46,41 @@ export const resultsData = [
 ];
 
  export  const features = [
-    {
-      id: 1,
-      title: "Custom-made & invisible",
-      description:
-        "Tailored for your teeth and smile with a clear, discreet appearance.",
-      image: Frame3,
-      bgColor: "bg-primary",
-      decorativePosition: "left-100",
-    },
-    {
-      id: 2,
-      title: "Predictable results",
-      description:
-        "Advanced 3D modeling and AI-technology for precise planning.",
-      image: Frame5,
-      bgColor: "bg-primary",
-      decorativePosition: "right-56",
-    },
-    {
-      id: 3,
-      title: "Expert Orthodontists",
-      description: "Highly experienced dental professionals.",
-      image: choose3,
-      bgColor: "bg-primary",
-      decorativePosition: "left-71",
-    },
-    {
-      id: 4,
-      title: "Unlimited Aligners",
-      description: "No extra cost for aligners and consultations.",
-      image: choose4,
-      bgColor: "bg-neutral",
-      decorativePosition: "left-40",
-    },
-];
+   {
+     id: 1,
+     title: "Custom-made & invisible",
+     description:
+       "Tailored for your teeth and smile with a clear, discreet appearance.",
+     image: Frame53,
+     bgColor: "bg-primary",
+     decorativePosition: "left-100",
+   },
+   {
+     id: 2,
+     title: "Predictable results",
+     description:
+       "Advanced 3D modeling and AI-technology for precise planning.",
+     image: Frame54,
+     bgColor: "bg-primary",
+     decorativePosition: "right-56",
+   },
+   {
+     id: 3,
+     title: "Expert Orthodontists",
+     description: "Highly experienced dental professionals.",
+     image: choose3,
+     bgColor: "bg-primary",
+     decorativePosition: "left-71",
+   },
+   {
+     id: 4,
+     title: "Unlimited Aligners",
+     description: "No extra cost for aligners and consultations.",
+     image: choose4,
+     bgColor: "bg-neutral",
+     decorativePosition: "left-40",
+   },
+ ];
   
 export const faqs = [
   {
@@ -102,50 +109,50 @@ export const faqs = [
       "Treatment duration depends on the case but usually ranges from 6 to 12 months.",
   },
 ];
- export const rows = [
-   {
-     feature: "Easy to complex cases",
-     whistle: { type: "text", value: "Yes, mild to\ncomplex" },
-     other: { type: "text", value: "No, only mild to\nmoderate" },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
-   {
-     feature: "Clear-cut Pricing",
-     whistle: { type: "icon", url: CHECK_GREEN3_URL },
-     other: { type: "icon", url: CROSS_RED1_URL },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
-   {
-     feature: "Aligner Change",
-     whistle: { type: "text", value: "Every 10 days" },
-     other: { type: "text", value: "Every 2 weeks" },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
-   {
-     feature: "Clinical Partnership",
-     whistle: { type: "icon", url: CHECK_GREEN2_URL },
-     other: { type: "icon", url: CROSS_RED2_URL },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
-   {
-     feature: "Movement Between Cities",
-     whistle: { type: "icon", url: CHECK_GREEN_URL },
-     other: { type: "icon", url: CROSS_RED3_URL },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
-   {
-     feature: "Complimentary Teeth Scaling",
-     whistle: { type: "icon", url: CHECK_GREEN4_URL },
-     other: { type: "icon", url: CROSS_RED4_URL },
-     expand:
-       "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
-   },
- ];
+//  export const rows = [
+//    {
+//      feature: "Easy to complex cases",
+//      whistle: { type: "text", value: "Yes, mild to\ncomplex" },
+//      other: { type: "text", value: "No, only mild to\nmoderate" },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//    {
+//      feature: "Clear-cut Pricing",
+//      whistle: { type: "icon", url: CHECK_GREEN3_URL },
+//      other: { type: "icon", url: CROSS_RED1_URL },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//    {
+//      feature: "Aligner Change",
+//      whistle: { type: "text", value: "Every 10 days" },
+//      other: { type: "text", value: "Every 2 weeks" },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//    {
+//      feature: "Clinical Partnership",
+//      whistle: { type: "icon", url: CHECK_GREEN2_URL },
+//      other: { type: "icon", url: CROSS_RED2_URL },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//    {
+//      feature: "Movement Between Cities",
+//      whistle: { type: "icon", url: CHECK_GREEN_URL },
+//      other: { type: "icon", url: CROSS_RED3_URL },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//    {
+//      feature: "Complimentary Teeth Scaling",
+//      whistle: { type: "icon", url: CHECK_GREEN4_URL },
+//      other: { type: "icon", url: CROSS_RED4_URL },
+//      expand:
+//        "Whistle Aligners has transparent pricing and does not include any hidden costs. All expenses, including consultations and scans, are incorporated into a single fee, offering patients a hassle-free and clear financial experience.",
+//    },
+//  ];
 
   export const STEPS = [
    {
@@ -171,21 +178,21 @@ export const faqs = [
 ];
  
  export const feature = [
-  {
-    icon: Frame,
-    title: "Next-Gen",
-    desc: "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material.",
-  },
-  {
-    icon: Predictable,
+   {
+     icon: Frame,
+     title: "Next-Gen",
+     desc: "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material.",
+   },
+   {
+     icon: Predictable,
 
-    title: "Hassle-Free",
-    desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
-  },
-  {
-    icon: Price,
-    title: "Transparent Pricing",
-    desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
-  },
-];
+     title: "Hassle-Free",
+     desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
+   },
+   {
+     icon: price,
+     title: "Transparent Pricing",
+     desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
+   },
+ ];
 

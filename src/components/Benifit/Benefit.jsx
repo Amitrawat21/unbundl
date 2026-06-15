@@ -3,7 +3,7 @@ import choose3 from "../../assets/choose3.png";
 import choose4 from "../../assets/choose4.png";
 import Frame3 from "../../assets/Frame53.png";
 import Frame5 from "../../assets/Frame54.png";
-import features from "../../assets/Data/ResultData";
+import { features } from "../../assets/Data/ResultData.js";
 const FeatureCard = ({ feature, index }) => {
   return (
     <article className="feature-card">
@@ -26,7 +26,6 @@ const FeatureCard = ({ feature, index }) => {
 };
 
 const Features = () => {
-
   return (
     <main className="features-main">
       <section className="features-section">

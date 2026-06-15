@@ -3,7 +3,7 @@ import Frame from "../../assets/Frame.svg";
 import Price from "../../assets/Price.svg";
 import Predictable from "../../assets/Predictable.svg";
 import TeethMachine from "../../assets/TeethMachine.png";
-import feature from "../../assets/Data/ResultData";
+import { feature } from "../../assets/Data/ResultData";
 
 
 
