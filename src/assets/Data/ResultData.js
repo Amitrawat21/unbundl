@@ -2,11 +2,11 @@ import GapsAfter1 from "../GapsAfter1.png";
 import GapsBefore1 from "../GapsBefore1.png";
 import CrookedBefore from "../CrookedBefore.png";
 import CrookedAfter from "../CrookedAfter.png";
-import ProtrudingBefore from "../ProtrudingBefore.png";
+import ProtrudingBefore from "../Protrudingbefore.png";
 import ProtrudingAfter from "../ProtrudingAfter.png";
-import OverBiteBefore from "../OverBiteBefore.png";
-import OverBiteAfter from "../OverBiteAfter.png";
-import price from "../price.svg";
+import OverBiteBefore from "../OverbiteBefore.png";
+import OverBiteAfter from "../OverbiteAfter.png";
+import price from "../Price.svg";
 import Frame from "../Frame.svg";
 import Predictable from "../Predictable.svg";
 import Frame53 from "../Frame53.png";
@@ -45,43 +45,42 @@ export const resultsData = [
   },
 ];
 
- export  const features = [
-   {
-     id: 1,
-     title: "Custom-made & invisible",
-     description:
-       "Tailored for your teeth and smile with a clear, discreet appearance.",
-     image: Frame53,
-     bgColor: "bg-primary",
-     decorativePosition: "left-100",
-   },
-   {
-     id: 2,
-     title: "Predictable results",
-     description:
-       "Advanced 3D modeling and AI-technology for precise planning.",
-     image: Frame54,
-     bgColor: "bg-primary",
-     decorativePosition: "right-56",
-   },
-   {
-     id: 3,
-     title: "Expert Orthodontists",
-     description: "Highly experienced dental professionals.",
-     image: choose3,
-     bgColor: "bg-primary",
-     decorativePosition: "left-71",
-   },
-   {
-     id: 4,
-     title: "Unlimited Aligners",
-     description: "No extra cost for aligners and consultations.",
-     image: choose4,
-     bgColor: "bg-neutral",
-     decorativePosition: "left-40",
-   },
- ];
-  
+export const features = [
+  {
+    id: 1,
+    title: "Custom-made & invisible",
+    description:
+      "Tailored for your teeth and smile with a clear, discreet appearance.",
+    image: Frame53,
+    bgColor: "bg-primary",
+    decorativePosition: "left-100",
+  },
+  {
+    id: 2,
+    title: "Predictable results",
+    description: "Advanced 3D modeling and AI-technology for precise planning.",
+    image: Frame54,
+    bgColor: "bg-primary",
+    decorativePosition: "right-56",
+  },
+  {
+    id: 3,
+    title: "Expert Orthodontists",
+    description: "Highly experienced dental professionals.",
+    image: choose3,
+    bgColor: "bg-primary",
+    decorativePosition: "left-71",
+  },
+  {
+    id: 4,
+    title: "Unlimited Aligners",
+    description: "No extra cost for aligners and consultations.",
+    image: choose4,
+    bgColor: "bg-neutral",
+    decorativePosition: "left-40",
+  },
+];
+
 export const faqs = [
   {
     question: "What are Aligners?",
@@ -154,45 +153,44 @@ export const faqs = [
 //    },
 //  ];
 
-  export const STEPS = [
-   {
-     num: 1,
-     title: "Scan",
-     desc: "We use an AI-powered scanner to take a detailed 3D image of your teeth.",
-   },
-   {
-     num: 2,
-     title: "Plan",
-     desc: "Our Orthodontists design your customized smile enhancement plan using highly advanced software.",
-   },
-   {
-     num: 3,
-     title: "Fabricate",
-     desc: "We manufacture your custom aligners leveraging 3D printing & laser technology.",
-   },
-   {
-     num: 4,
-     title: "Wear",
-     desc: "Your Whistle Aligners and expert Clove Dental Orthodontists monitor your progress across the journey.",
-   },
+export const STEPS = [
+  {
+    num: 1,
+    title: "Scan",
+    desc: "We use an AI-powered scanner to take a detailed 3D image of your teeth.",
+  },
+  {
+    num: 2,
+    title: "Plan",
+    desc: "Our Orthodontists design your customized smile enhancement plan using highly advanced software.",
+  },
+  {
+    num: 3,
+    title: "Fabricate",
+    desc: "We manufacture your custom aligners leveraging 3D printing & laser technology.",
+  },
+  {
+    num: 4,
+    title: "Wear",
+    desc: "Your Whistle Aligners and expert Clove Dental Orthodontists monitor your progress across the journey.",
+  },
 ];
- 
- export const feature = [
-   {
-     icon: Frame,
-     title: "Next-Gen",
-     desc: "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material.",
-   },
-   {
-     icon: Predictable,
 
-     title: "Hassle-Free",
-     desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
-   },
-   {
-     icon: price,
-     title: "Transparent Pricing",
-     desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
-   },
- ];
+export const feature = [
+  {
+    icon: Frame,
+    title: "Next-Gen",
+    desc: "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material.",
+  },
+  {
+    icon: Predictable,
 
+    title: "Hassle-Free",
+    desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
+  },
+  {
+    icon: price,
+    title: "Transparent Pricing",
+    desc: "Predictable, comfortable & lifestyle-friendly for an easy smile transformation.",
+  },
+];
